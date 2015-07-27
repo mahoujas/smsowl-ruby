@@ -3,13 +3,13 @@ require 'json'
 
 ENV['SSL_CERT_FILE'] = './cacert.pem'
 
-class SmsType
-	NORMAL = "normal"
-	FLASH = "flash"
-end
-
-
 class SmsOwl
+
+	class SmsType
+		NORMAL = "normal"
+		FLASH = "flash"
+	end
+
 
 	URL = URI('https://api.smsowl.in/v1/sms');
 
@@ -18,7 +18,7 @@ class SmsOwl
 		@apiKey = apiKey
 	end
 
-	def sendPromotionalSms(senderId,to,message,smsType = 'normal')
+	def sendPromotionalSms(senderId,to,message,smsType = SmsOwl::SmsType::NORMAL)
 		req = Net::HTTP::Post.new(SmsOwl::URL, initheader = {'Content-Type' =>'application/json'})
 		data = getCommonArray("promotional",smsType,senderId,to)
 		data['message'] = message

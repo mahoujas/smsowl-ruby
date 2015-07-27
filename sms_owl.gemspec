@@ -8,5 +8,6 @@ Gem::Specification.new do |s|
   s.email       = 'mahoujas@mahoujas.com'
   s.files       = ["lib/sms_owl.rb","lib/cacert.pem"]
   s.homepage    = 'https://smsowl.in'
-  s.license       = 'MIT'
+  s.license     = 'MIT'
+  s.extra_rdoc_files = ['README.md']
 end

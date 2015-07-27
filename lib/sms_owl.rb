@@ -1,7 +1,7 @@
 require 'net/http'
 require 'json'
 
-ENV['SSL_CERT_FILE'] = './cacert.pem'
+ENV['SSL_CERT_FILE'] =  File.dirname(__FILE__) + '/cacert.pem'
 
 class SmsOwl
 

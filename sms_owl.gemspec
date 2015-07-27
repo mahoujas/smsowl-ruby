@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "This is Ruby wrapper for SmsOwl REST API"
   s.authors     = ["Mahoujas"]
   s.email       = 'mahoujas@mahoujas.com'
-  s.files       = ["lib/sms_owl.rb"]
+  s.files       = ["lib/sms_owl.rb","lib/cacert.pem"]
   s.homepage    = 'https://smsowl.in'
   s.license       = 'MIT'
 end
